@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5410896D-F726-4F4C-845E-D906FC400E8A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bills</RootNamespace>
+    <AssemblyName>Bills</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>wallet24.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Base.cs" />
+    <Compile Include="Classes\BillBody.cs" />
+    <Compile Include="Classes\BillCategory.cs" />
+    <Compile Include="Classes\BillHead.cs" />
+    <Compile Include="Classes\BillPurpose.cs" />
+    <Compile Include="Classes\City.cs" />
+    <Compile Include="Classes\Country.cs" />
+    <Compile Include="Classes\Income.cs" />
+    <Compile Include="Classes\IncomeCategory.cs" />
+    <Compile Include="Classes\IncomePaymen.cs" />
+    <Compile Include="Classes\MainHelper.cs" />
+    <Compile Include="Classes\Plan.cs" />
+    <Compile Include="Classes\Region.cs" />
+    <Compile Include="Classes\Status.cs" />
+    <Compile Include="Classes\Store.cs" />
+    <Compile Include="Classes\Uom.cs" />
+    <Compile Include="Controls\lblAmount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\lblAmount.Designer.cs">
+      <DependentUpon>lblAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\txtAmount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\txtAmount.Designer.cs">
+      <DependentUpon>txtAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fBill.Designer.cs">
+      <DependentUpon>fBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fBillBody.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fBillBody.Designer.cs">
+      <DependentUpon>fBillBody.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BillBodyUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BillBodyUpdate.Designer.cs">
+      <DependentUpon>BillBodyUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fBillCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fBillCategory.Designer.cs">
+      <DependentUpon>fBillCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fBillCategoryUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fBillCategoryUpdate.Designer.cs">
+      <DependentUpon>fBillCategoryUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fBillPurpose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fBillPurpose.Designer.cs">
+      <DependentUpon>fBillPurpose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fBillPurposeUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fBillPurposeUpdate.Designer.cs">
+      <DependentUpon>fBillPurposeUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fCity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fCity.Designer.cs">
+      <DependentUpon>fCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fCityUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fCityUpdate.Designer.cs">
+      <DependentUpon>fCityUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fConnection.Designer.cs">
+      <DependentUpon>fConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fCountry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fCountry.Designer.cs">
+      <DependentUpon>fCountry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fCountryUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fCountryUpdate.Designer.cs">
+      <DependentUpon>fCountryUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fCreateDataBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fCreateDataBase.designer.cs">
+      <DependentUpon>fCreateDataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fIncome.Designer.cs">
+      <DependentUpon>fIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fIncomeCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fIncomeCategory.Designer.cs">
+      <DependentUpon>fIncomeCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fIncomeCategoryUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fIncomeCategoryUpdate.Designer.cs">
+      <DependentUpon>fIncomeCategoryUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fIncomePaymen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fIncomePaymen.Designer.cs">
+      <DependentUpon>fIncomePaymen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fIncomePaymenUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fIncomePaymenUpdate.Designer.cs">
+      <DependentUpon>fIncomePaymenUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fMeasure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fMeasure.Designer.cs">
+      <DependentUpon>fMeasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fMeasureUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fMeasureUpdate.Designer.cs">
+      <DependentUpon>fMeasureUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fPlan.Designer.cs">
+      <DependentUpon>fPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fPlanUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fPlanUpdate.Designer.cs">
+      <DependentUpon>fPlanUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fRegion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fRegion.Designer.cs">
+      <DependentUpon>fRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fRegionUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fRegionUpdate.Designer.cs">
+      <DependentUpon>fRegionUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fStatus.Designer.cs">
+      <DependentUpon>fStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fStore.Designer.cs">
+      <DependentUpon>fStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fStoreUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fStoreUpdate.Designer.cs">
+      <DependentUpon>fStoreUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MDIBackground.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MDIBackground.Designer.cs">
+      <DependentUpon>MDIBackground.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ResizeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ResizeForm.Designer.cs">
+      <DependentUpon>ResizeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\wBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\wBill.Designer.cs">
+      <DependentUpon>wBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\wBillMonthRecapitulation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\wBillMonthRecapitulation.Designer.cs">
+      <DependentUpon>wBillMonthRecapitulation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\wBillOnCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\wBillOnCategory.Designer.cs">
+      <DependentUpon>wBillOnCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\wPlanRealCompare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\wPlanRealCompare.Designer.cs">
+      <DependentUpon>wPlanRealCompare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\NonQueryHelper.cs" />
+    <Compile Include="Helpers\ReaderHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\lblAmount.resx">
+      <DependentUpon>lblAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\txtAmount.resx">
+      <DependentUpon>txtAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fBill.resx">
+      <DependentUpon>fBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fBillBody.resx">
+      <DependentUpon>fBillBody.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BillBodyUpdate.resx">
+      <DependentUpon>BillBodyUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fBillCategory.resx">
+      <DependentUpon>fBillCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fBillCategoryUpdate.resx">
+      <DependentUpon>fBillCategoryUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fBillPurpose.resx">
+      <DependentUpon>fBillPurpose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fBillPurposeUpdate.resx">
+      <DependentUpon>fBillPurposeUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fCity.resx">
+      <DependentUpon>fCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fCityUpdate.resx">
+      <DependentUpon>fCityUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fConnection.resx">
+      <DependentUpon>fConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fCountry.resx">
+      <DependentUpon>fCountry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fCountryUpdate.resx">
+      <DependentUpon>fCountryUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fCreateDataBase.resx">
+      <DependentUpon>fCreateDataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fIncome.resx">
+      <DependentUpon>fIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fIncomeCategory.resx">
+      <DependentUpon>fIncomeCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fIncomeCategoryUpdate.resx">
+      <DependentUpon>fIncomeCategoryUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fIncomePaymen.resx">
+      <DependentUpon>fIncomePaymen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fIncomePaymenUpdate.resx">
+      <DependentUpon>fIncomePaymenUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fMeasure.resx">
+      <DependentUpon>fMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fMeasureUpdate.resx">
+      <DependentUpon>fMeasureUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fPlan.resx">
+      <DependentUpon>fPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fPlanUpdate.resx">
+      <DependentUpon>fPlanUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fRegion.resx">
+      <DependentUpon>fRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fRegionUpdate.resx">
+      <DependentUpon>fRegionUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fStatus.resx">
+      <DependentUpon>fStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fStore.resx">
+      <DependentUpon>fStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fStoreUpdate.resx">
+      <DependentUpon>fStoreUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MDIBackground.resx">
+      <DependentUpon>MDIBackground.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ResizeForm.resx">
+      <DependentUpon>ResizeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\wBill.resx">
+      <DependentUpon>wBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\wBillMonthRecapitulation.resx">
+      <DependentUpon>wBillMonthRecapitulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\wBillOnCategory.resx">
+      <DependentUpon>wBillOnCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\wPlanRealCompare.resx">
+      <DependentUpon>wPlanRealCompare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action-cancel-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajax-loaderC.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect-icon32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_add_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payingbillsSplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycle24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycle_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bin-red-full-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bin-blue-full-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash-icon32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Files-Edit32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="wallet24.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
